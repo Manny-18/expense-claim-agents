@@ -1,0 +1,15 @@
+# Core system: the agents, tools and policy retrieval use the standard library only.
+# Nothing below is needed to run `python run_review.py`.
+
+# Front end
+streamlit>=1.40
+
+# Notebook and analysis
+pandas>=2.0
+matplotlib>=3.7
+jupyter>=1.0
+nbformat>=5.9
+
+# Optional: the CrewAI framework path in src/crew_runner.py
+# crewai>=0.70
+# crewai-tools>=0.12

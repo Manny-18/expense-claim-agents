@@ -1,0 +1,66 @@
+[
+  {
+    "employee_id": "E1001",
+    "name": "Rhea Malhotra",
+    "grade": "B1",
+    "base_city": "Gurugram",
+    "manager_id": "E2010",
+    "manager_grade": "B4",
+    "leave_dates": [
+      "2026-08-14"
+    ],
+    "missing_receipt_uses_this_quarter": 0
+  },
+  {
+    "employee_id": "E1002",
+    "name": "Kabir Sheth",
+    "grade": "B2",
+    "base_city": "Mumbai",
+    "manager_id": "E2011",
+    "manager_grade": "B4",
+    "leave_dates": [],
+    "missing_receipt_uses_this_quarter": 2
+  },
+  {
+    "employee_id": "E1003",
+    "name": "Ananya Rao",
+    "grade": "B3",
+    "base_city": "Bengaluru",
+    "manager_id": "E2010",
+    "manager_grade": "B4",
+    "leave_dates": [
+      "2026-09-05"
+    ],
+    "missing_receipt_uses_this_quarter": 1
+  },
+  {
+    "employee_id": "E1004",
+    "name": "Vikram Iyer",
+    "grade": "B4",
+    "base_city": "Chennai",
+    "manager_id": "E3001",
+    "manager_grade": "B5",
+    "leave_dates": [],
+    "missing_receipt_uses_this_quarter": 0
+  },
+  {
+    "employee_id": "E1005",
+    "name": "Sana Qureshi",
+    "grade": "B5",
+    "base_city": "Delhi",
+    "manager_id": "E3001",
+    "manager_grade": "B5",
+    "leave_dates": [],
+    "missing_receipt_uses_this_quarter": 0
+  },
+  {
+    "employee_id": "E1006",
+    "name": "Dev Khanna",
+    "grade": "B2",
+    "base_city": "Pune",
+    "manager_id": "E1006",
+    "manager_grade": "B2",
+    "leave_dates": [],
+    "missing_receipt_uses_this_quarter": 0
+  }
+]

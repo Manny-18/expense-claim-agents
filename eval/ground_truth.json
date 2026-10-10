@@ -1,0 +1,310 @@
+[
+  {
+    "claim_id": "CLM-1001",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "clean_overnight_trip",
+    "note": "B2 metro hotel net 5500 exactly at ceiling, meals 1180 under 1500 cap"
+  },
+  {
+    "claim_id": "CLM-1002",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "clean_same_day_trip",
+    "note": "B4 same day meal cap is 1250, claimed 900"
+  },
+  {
+    "claim_id": "CLM-1003",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "clean_non_metro",
+    "note": "B1 non metro hotel ceiling 2800, net 2420"
+  },
+  {
+    "claim_id": "CLM-1004",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "clean_mileage_exact",
+    "note": "45 km at 12.00 equals 540 exactly"
+  },
+  {
+    "claim_id": "CLM-1005",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "clean_b5_metro",
+    "note": "B5 metro ceiling 15000, net 14000"
+  },
+  {
+    "claim_id": "CLM-1006",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "clean_late_night_commute",
+    "note": "Outside the 09:00 to 19:00 window so TE-04.2 permits it"
+  },
+  {
+    "claim_id": "CLM-1007",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "clean_laundry_long_trip",
+    "note": "Net 20000 against 4 x 5500 = 22000, laundry 480 under 500 on a 4 night trip"
+  },
+  {
+    "claim_id": "CLM-2001",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 1500.0,
+    "scenario": "hotel_over_ceiling",
+    "note": "B1 metro ceiling 4000, net 5500, excess 1500"
+  },
+  {
+    "claim_id": "CLM-2002",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 800.0,
+    "scenario": "meals_daily_cap_across_two_bills",
+    "note": "B3 metro daily cap 2000, day total 2800, excess 800 (TE-03.1)"
+  },
+  {
+    "claim_id": "CLM-2003",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 900.0,
+    "scenario": "alcohol_line_inside_bill",
+    "note": "Alcohol 900 disallowed, remaining 1500 is under the B4 metro cap of 2500"
+  },
+  {
+    "claim_id": "CLM-2004",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 180.0,
+    "scenario": "mileage_over_rate",
+    "note": "60 km entitles 720, claimed 900, excess 180"
+  },
+  {
+    "claim_id": "CLM-2005",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 320.0,
+    "scenario": "laundry_over_cap",
+    "note": "Laundry cap 500 on a qualifying 5 night trip, excess 320"
+  },
+  {
+    "claim_id": "CLM-2006",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 1000.0,
+    "scenario": "team_meal_per_head_cap",
+    "note": "Four attendees at 800 equals 3200, claimed 4200, excess 1000"
+  },
+  {
+    "claim_id": "CLM-2007",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 1250.0,
+    "scenario": "minibar_non_reimbursable",
+    "note": "Minibar is on the TE-10.1 list, hotel net 8000 is under the B4 ceiling of 10000"
+  },
+  {
+    "claim_id": "CLM-2008",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 2000.0,
+    "scenario": "fuel_double_claimed_with_mileage",
+    "note": "TE-04.3 bars a fuel bill alongside mileage on the same date"
+  },
+  {
+    "claim_id": "CLM-2009",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 480.0,
+    "scenario": "personal_commute_in_window",
+    "note": "First leg is a personal commute inside the 09:00 to 19:00 window"
+  },
+  {
+    "claim_id": "CLM-2010",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 600.0,
+    "scenario": "b5_meal_cap_breach",
+    "note": "B5 metro meal cap 3500, claimed 4100, excess 600"
+  },
+  {
+    "claim_id": "CLM-3001",
+    "expected_outcome": "REJECT",
+    "expected_disallowed": 3800.0,
+    "scenario": "time_barred_over_60_days",
+    "note": "81 days late, TE-07.3 makes it not payable"
+  },
+  {
+    "claim_id": "CLM-3002",
+    "expected_outcome": "REJECT",
+    "expected_disallowed": 650.0,
+    "scenario": "no_receipt_no_declaration",
+    "note": "No evidence at all, the single line fails TE-05"
+  },
+  {
+    "claim_id": "CLM-3003",
+    "expected_outcome": "REJECT",
+    "expected_disallowed": 3200.0,
+    "scenario": "alcohol_only_claim",
+    "note": "Entire value is alcohol, TE-03.2"
+  },
+  {
+    "claim_id": "CLM-3004",
+    "expected_outcome": "REJECT",
+    "expected_disallowed": 900.0,
+    "scenario": "missing_receipt_quota_exhausted",
+    "note": "Employee has already used two declarations this quarter, TE-05.4"
+  },
+  {
+    "claim_id": "CLM-3005",
+    "expected_outcome": "REJECT",
+    "expected_disallowed": 2400.0,
+    "scenario": "non_reimbursable_gym",
+    "note": "Gym membership is on the TE-10.1 list"
+  },
+  {
+    "claim_id": "CLM-4001",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "duplicate_against_history",
+    "note": "Identical vendor, date and amount already claimed in CLM-0901"
+  },
+  {
+    "claim_id": "CLM-4002",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "duplicate_within_claim",
+    "note": "Same vendor and date, amounts within one percent"
+  },
+  {
+    "claim_id": "CLM-4003",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "split_bill_under_threshold",
+    "note": "Two bills just under 1000 totalling 1860, TE-09.2"
+  },
+  {
+    "claim_id": "CLM-4004",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "expense_on_approved_leave_date",
+    "note": "2026-08-14 is an approved leave day for E1001, and the claim is also 56 days old"
+  },
+  {
+    "claim_id": "CLM-4005",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "cab_above_preapproval_threshold",
+    "note": "Above INR 5,000 without pre approval, TE-04.4"
+  },
+  {
+    "claim_id": "CLM-4006",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "late_between_31_and_60_days",
+    "note": "45 days old, TE-07.2 routes to a B4 approver rather than rejecting"
+  },
+  {
+    "claim_id": "CLM-4007",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "travel_class_above_entitlement",
+    "note": "B2 is entitled to economy, business class needs a human decision"
+  },
+  {
+    "claim_id": "CLM-4008",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "entertainment_without_preapproval",
+    "note": "Above INR 8,000 without pre approval, TE-03.3"
+  },
+  {
+    "claim_id": "CLM-4009",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "invalid_gstin_checksum",
+    "note": "GSTIN fails the modulus 36 checksum, credit at risk"
+  },
+  {
+    "claim_id": "CLM-4010",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "missing_vendor_gstin",
+    "note": "No GSTIN on a 4,800 invoice, TE-05.1 and TE-06.1"
+  },
+  {
+    "claim_id": "CLM-4011",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "future_dated_expense",
+    "note": "Expense date is after the submission date"
+  },
+  {
+    "claim_id": "CLM-4012",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "tax_exceeds_gross",
+    "note": "Tax larger than the gross amount is a data integrity problem"
+  },
+  {
+    "claim_id": "CLM-4013",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 0.0,
+    "scenario": "self_approval_conflict",
+    "note": "The claimant is listed as their own manager, TE-08.2"
+  },
+  {
+    "claim_id": "CLM-4014",
+    "expected_outcome": "REJECT",
+    "expected_disallowed": 5600.0,
+    "scenario": "entertainment_no_named_attendee",
+    "note": "TE-03.3 is unconditional: an unnamed attendee makes the claim non reimbursable, so this is a cited rejection rather than an escalation. This label was corrected during the first evaluation run; the original label of ESCALATE was a labelling error, not a system error."
+  },
+  {
+    "claim_id": "CLM-4015",
+    "expected_outcome": "ESCALATE",
+    "expected_disallowed": 300.0,
+    "scenario": "mixed_breach_and_duplicate",
+    "note": "Meal excess of 300 over the B3 metro cap of 2000, plus L3 duplicates CLM-0902"
+  },
+  {
+    "claim_id": "CLM-5001",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "weekend_with_engagement_code",
+    "note": "Saturday spend with an engagement code must not be flagged"
+  },
+  {
+    "claim_id": "CLM-5002",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "small_value_no_invoice_needed",
+    "note": "Both lines are under INR 1,000 so a receipt or UPI reference suffices, and the employee is within the declaration quota"
+  },
+  {
+    "claim_id": "CLM-5003",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "round_amounts_are_advisory_only",
+    "note": "Three round amounts raise an advisory flag under TE-09.3 but must not change the outcome"
+  },
+  {
+    "claim_id": "CLM-5004",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "exactly_30_days_old",
+    "note": "30 days is inside the TE-07.1 window and must not be treated as late"
+  },
+  {
+    "claim_id": "CLM-5005",
+    "expected_outcome": "PARTIAL_APPROVE",
+    "expected_disallowed": 300.0,
+    "scenario": "laundry_on_short_trip",
+    "note": "Trip is 2 nights, below the 4 night threshold in TE-10.2"
+  },
+  {
+    "claim_id": "CLM-5006",
+    "expected_outcome": "APPROVE",
+    "expected_disallowed": 0.0,
+    "scenario": "two_wheeler_rate_exact",
+    "note": "90 km at 4.50 equals 405"
+  },
+  {
+    "claim_id": "CLM-5007",
+    "expected_outcome": "REJECT",
+    "expected_disallowed": 5500.0,
+    "scenario": "third_party_invoice",
+    "note": "TE-05.3 invalidates an invoice in a third party name"
+  }
+]

@@ -1,0 +1,45 @@
+claim_id,expected_outcome,expected_disallowed,scenario,note
+CLM-1001,APPROVE,0.0,clean_overnight_trip,"B2 metro hotel net 5500 exactly at ceiling, meals 1180 under 1500 cap"
+CLM-1002,APPROVE,0.0,clean_same_day_trip,"B4 same day meal cap is 1250, claimed 900"
+CLM-1003,APPROVE,0.0,clean_non_metro,"B1 non metro hotel ceiling 2800, net 2420"
+CLM-1004,APPROVE,0.0,clean_mileage_exact,45 km at 12.00 equals 540 exactly
+CLM-1005,APPROVE,0.0,clean_b5_metro,"B5 metro ceiling 15000, net 14000"
+CLM-1006,APPROVE,0.0,clean_late_night_commute,Outside the 09:00 to 19:00 window so TE-04.2 permits it
+CLM-1007,APPROVE,0.0,clean_laundry_long_trip,"Net 20000 against 4 x 5500 = 22000, laundry 480 under 500 on a 4 night trip"
+CLM-2001,PARTIAL_APPROVE,1500.0,hotel_over_ceiling,"B1 metro ceiling 4000, net 5500, excess 1500"
+CLM-2002,PARTIAL_APPROVE,800.0,meals_daily_cap_across_two_bills,"B3 metro daily cap 2000, day total 2800, excess 800 (TE-03.1)"
+CLM-2003,PARTIAL_APPROVE,900.0,alcohol_line_inside_bill,"Alcohol 900 disallowed, remaining 1500 is under the B4 metro cap of 2500"
+CLM-2004,PARTIAL_APPROVE,180.0,mileage_over_rate,"60 km entitles 720, claimed 900, excess 180"
+CLM-2005,PARTIAL_APPROVE,320.0,laundry_over_cap,"Laundry cap 500 on a qualifying 5 night trip, excess 320"
+CLM-2006,PARTIAL_APPROVE,1000.0,team_meal_per_head_cap,"Four attendees at 800 equals 3200, claimed 4200, excess 1000"
+CLM-2007,PARTIAL_APPROVE,1250.0,minibar_non_reimbursable,"Minibar is on the TE-10.1 list, hotel net 8000 is under the B4 ceiling of 10000"
+CLM-2008,PARTIAL_APPROVE,2000.0,fuel_double_claimed_with_mileage,TE-04.3 bars a fuel bill alongside mileage on the same date
+CLM-2009,PARTIAL_APPROVE,480.0,personal_commute_in_window,First leg is a personal commute inside the 09:00 to 19:00 window
+CLM-2010,PARTIAL_APPROVE,600.0,b5_meal_cap_breach,"B5 metro meal cap 3500, claimed 4100, excess 600"
+CLM-3001,REJECT,3800.0,time_barred_over_60_days,"81 days late, TE-07.3 makes it not payable"
+CLM-3002,REJECT,650.0,no_receipt_no_declaration,"No evidence at all, the single line fails TE-05"
+CLM-3003,REJECT,3200.0,alcohol_only_claim,"Entire value is alcohol, TE-03.2"
+CLM-3004,REJECT,900.0,missing_receipt_quota_exhausted,"Employee has already used two declarations this quarter, TE-05.4"
+CLM-3005,REJECT,2400.0,non_reimbursable_gym,Gym membership is on the TE-10.1 list
+CLM-4001,ESCALATE,0.0,duplicate_against_history,"Identical vendor, date and amount already claimed in CLM-0901"
+CLM-4002,ESCALATE,0.0,duplicate_within_claim,"Same vendor and date, amounts within one percent"
+CLM-4003,ESCALATE,0.0,split_bill_under_threshold,"Two bills just under 1000 totalling 1860, TE-09.2"
+CLM-4004,ESCALATE,0.0,expense_on_approved_leave_date,"2026-08-14 is an approved leave day for E1001, and the claim is also 56 days old"
+CLM-4005,ESCALATE,0.0,cab_above_preapproval_threshold,"Above INR 5,000 without pre approval, TE-04.4"
+CLM-4006,ESCALATE,0.0,late_between_31_and_60_days,"45 days old, TE-07.2 routes to a B4 approver rather than rejecting"
+CLM-4007,ESCALATE,0.0,travel_class_above_entitlement,"B2 is entitled to economy, business class needs a human decision"
+CLM-4008,ESCALATE,0.0,entertainment_without_preapproval,"Above INR 8,000 without pre approval, TE-03.3"
+CLM-4009,ESCALATE,0.0,invalid_gstin_checksum,"GSTIN fails the modulus 36 checksum, credit at risk"
+CLM-4010,ESCALATE,0.0,missing_vendor_gstin,"No GSTIN on a 4,800 invoice, TE-05.1 and TE-06.1"
+CLM-4011,ESCALATE,0.0,future_dated_expense,Expense date is after the submission date
+CLM-4012,ESCALATE,0.0,tax_exceeds_gross,Tax larger than the gross amount is a data integrity problem
+CLM-4013,ESCALATE,0.0,self_approval_conflict,"The claimant is listed as their own manager, TE-08.2"
+CLM-4014,REJECT,5600.0,entertainment_no_named_attendee,"TE-03.3 is unconditional: an unnamed attendee makes the claim non reimbursable, so this is a cited rejection rather than an escalation. This label was corrected during the first evaluation run; the original label of ESCALATE was a labelling error, not a system error."
+CLM-4015,ESCALATE,300.0,mixed_breach_and_duplicate,"Meal excess of 300 over the B3 metro cap of 2000, plus L3 duplicates CLM-0902"
+CLM-5001,APPROVE,0.0,weekend_with_engagement_code,Saturday spend with an engagement code must not be flagged
+CLM-5002,APPROVE,0.0,small_value_no_invoice_needed,"Both lines are under INR 1,000 so a receipt or UPI reference suffices, and the employee is within the declaration quota"
+CLM-5003,APPROVE,0.0,round_amounts_are_advisory_only,Three round amounts raise an advisory flag under TE-09.3 but must not change the outcome
+CLM-5004,APPROVE,0.0,exactly_30_days_old,30 days is inside the TE-07.1 window and must not be treated as late
+CLM-5005,PARTIAL_APPROVE,300.0,laundry_on_short_trip,"Trip is 2 nights, below the 4 night threshold in TE-10.2"
+CLM-5006,APPROVE,0.0,two_wheeler_rate_exact,90 km at 4.50 equals 405
+CLM-5007,REJECT,5500.0,third_party_invoice,TE-05.3 invalidates an invoice in a third party name

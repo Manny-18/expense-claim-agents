@@ -1,0 +1,82 @@
+[
+  {
+    "employee_id": "E1003",
+    "claim_id": "CLM-0901",
+    "line_id": "L1",
+    "vendor": "Taj Yeshwantpur",
+    "expense_date": "2026-09-18",
+    "amount": 6800.0
+  },
+  {
+    "employee_id": "E1003",
+    "claim_id": "CLM-0902",
+    "line_id": "L2",
+    "vendor": "Uber India",
+    "expense_date": "2026-09-20",
+    "amount": 740.0
+  },
+  {
+    "employee_id": "E1002",
+    "claim_id": "CLM-0810",
+    "line_id": "L1",
+    "vendor": "Indigo Airlines",
+    "expense_date": "2026-08-22",
+    "amount": 9400.0
+  },
+  {
+    "employee_id": "E1001",
+    "claim_id": "CLM-0705",
+    "line_id": "L3",
+    "vendor": "Chaayos",
+    "expense_date": "2026-07-11",
+    "amount": 430.0
+  },
+  {
+    "employee_id": "E1004",
+    "claim_id": "CLM-0700",
+    "line_id": "L1",
+    "vendor": "Vendor 0",
+    "expense_date": "2026-07-15",
+    "amount": 1000.0
+  },
+  {
+    "employee_id": "E1004",
+    "claim_id": "CLM-0701",
+    "line_id": "L1",
+    "vendor": "Vendor 1",
+    "expense_date": "2026-07-15",
+    "amount": 1001.0
+  },
+  {
+    "employee_id": "E1004",
+    "claim_id": "CLM-0702",
+    "line_id": "L1",
+    "vendor": "Vendor 2",
+    "expense_date": "2026-07-15",
+    "amount": 1002.0
+  },
+  {
+    "employee_id": "E1004",
+    "claim_id": "CLM-0703",
+    "line_id": "L1",
+    "vendor": "Vendor 3",
+    "expense_date": "2026-07-15",
+    "amount": 1003.0
+  },
+  {
+    "employee_id": "E1004",
+    "claim_id": "CLM-0704",
+    "line_id": "L1",
+    "vendor": "Vendor 4",
+    "expense_date": "2026-07-15",
+    "amount": 1004.0
+  },
+  {
+    "employee_id": "E1004",
+    "claim_id": "CLM-0705",
+    "line_id": "L1",
+    "vendor": "Vendor 5",
+    "expense_date": "2026-07-15",
+    "amount": 1005.0
+  }
+]

@@ -14,8 +14,8 @@ const ROLL = process.argv[3] || "065064";
 const OUT = process.argv[4] || "project_report.docx";
 const ROOT = path.resolve(__dirname, "..");
 
-const INK = "1B2430";
-const MUTED = "5A6472";
+const INK = "000000";
+const MUTED = "000000";
 const RULE = "C3CCD8";
 const HEADER_BG = "EEF2F7";
 const CODE_BG = "F5F7FA";
@@ -26,8 +26,8 @@ const p = (text, opts = {}) => new Paragraph({
   spacing: { after: opts.after ?? 140, line: 300 },
   alignment: opts.align,
   children: [new TextRun({
-    text, size: opts.size ?? 21, color: opts.color ?? INK,
-    bold: opts.bold, italics: opts.italics, font: opts.font,
+    text, size: opts.size ?? 23, color: opts.color ?? INK,
+    bold: opts.bold, italics: opts.italics, font: "Times New Roman",
   })],
 });
 
@@ -36,41 +36,41 @@ const rich = (runs, opts = {}) => new Paragraph({
   spacing: { after: opts.after ?? 140, line: 300 },
   alignment: opts.align,
   children: runs.map(r => new TextRun({
-    text: r.t, bold: r.b, italics: r.i, size: opts.size ?? 21,
+    text: r.t, bold: r.b, italics: r.i, size: opts.size ?? 23,
     color: r.color ?? opts.color ?? INK,
-    font: r.code ? "Consolas" : undefined,
+    font: "Times New Roman",
   })),
 });
 
 const h1 = (text) => new Paragraph({
   heading: HeadingLevel.HEADING_1,
   spacing: { before: 380, after: 170 },
-  children: [new TextRun({ text, size: 30, bold: true, color: INK })],
+  children: [new TextRun({ text, font: "Times New Roman", size: 30, bold: true, color: INK })],
 });
 
 const h2 = (text) => new Paragraph({
   heading: HeadingLevel.HEADING_2,
   spacing: { before: 280, after: 130 },
-  children: [new TextRun({ text, size: 24, bold: true, color: INK })],
+  children: [new TextRun({ text, font: "Times New Roman", size: 24, bold: true, color: INK })],
 });
 
 const bullet = (text, level = 0) => new Paragraph({
   numbering: { reference: "bullets", level },
   spacing: { after: 90, line: 300 },
-  children: [new TextRun({ text, size: 21, color: INK })],
+  children: [new TextRun({ text, font: "Times New Roman", size: 23, color: INK })],
 });
 
 const numbered = (text) => new Paragraph({
   numbering: { reference: "numbers", level: 0 },
   spacing: { after: 110, line: 300 },
-  children: [new TextRun({ text, size: 21, color: INK })],
+  children: [new TextRun({ text, font: "Times New Roman", size: 23, color: INK })],
 });
 
 const code = (lines) => lines.map((line, i) => new Paragraph({
   spacing: { after: i === lines.length - 1 ? 150 : 0, line: 240 },
   shading: { type: ShadingType.CLEAR, fill: CODE_BG },
   indent: { left: 170, right: 170 },
-  children: [new TextRun({ text: line || " ", font: "Consolas", size: 17, color: INK })],
+  children: [new TextRun({ text: line || " ", font: "Times New Roman", size: 20, color: INK })],
 }));
 
 const rule = () => new Paragraph({
@@ -94,7 +94,7 @@ function table(headers, rows, weights) {
     children: [new Paragraph({
       spacing: { after: 0, line: 260 },
       children: [new TextRun({
-        text, size: 18, bold: isHeader, color: isHeader ? INK : INK,
+        text, font: "Times New Roman", size: 20, bold: isHeader, color: INK,
       })],
     })],
   });
@@ -132,7 +132,7 @@ children.push(new Paragraph({
   alignment: AlignmentType.CENTER,
   children: [new TextRun({
     text: "Domain Expert AI Agents for Travel and Expense Adjudication",
-    bold: true, size: 40, color: INK,
+    font: "Times New Roman", bold: true, size: 40, color: INK,
   })],
 }));
 children.push(p("A multi agent system for policy compliant expense claim review",
@@ -169,7 +169,7 @@ children.push(new Paragraph({
     right: { style: BorderStyle.SINGLE, size: 4, color: RULE },
   },
   children: [
-    new TextRun({ text: "Summary.  ", bold: true, size: 20, color: INK }),
+    new TextRun({ text: "Summary.  ", font: "Times New Roman", bold: true, size: 20, color: INK }),
     new TextRun({
       text: "Six domain expert agents review a travel and expense claim against a 47 "
         + "clause company policy, decide what is payable, cite the clause behind every "
@@ -178,7 +178,7 @@ children.push(new Paragraph({
         + "percent on 44 hand labelled claims and holds 10 property based invariants "
         + "including a 300 claim fuzz run. Section 6.3 explains why the first of those two "
         + "numbers means less than the second.",
-      size: 20, color: INK,
+      font: "Times New Roman", size: 20, color: INK,
     }),
   ],
 }));
@@ -226,15 +226,17 @@ children.push(rich([
   { t: "The topology is a " }, { t: "blackboard pipeline", b: true },
   { t: ": agents never call each other, they read from and write to one shared state object. At any moment the blackboard can be printed and it shows exactly what the system believes and which agent said it, which is what makes the audit trail a property of the design rather than a logging afterthought." },
 ]));
-children.push(...code([
-  "Intake Agent",
-  "    |  (short circuit if no line carries any evidence)",
-  "Policy Expert  +  Tax Expert  +  Integrity Analyst    read/write the blackboard",
-  "    |",
-  "Adjudicator       arbitration, the only agent that sets an outcome",
-  "    |",
-  "Communicator      employee message and audit note",
-]));
+children.push(table(
+  ["Stage", "Agent or agents", "What happens"],
+  [
+    ["1", "Intake Agent", "Evidence sufficiency. Short circuits the rest if no line carries any evidence at all."],
+    ["2", "Policy Expert, Tax Expert, Integrity Analyst", "Three specialists read and write the same blackboard."],
+    ["3", "Adjudicator", "Arbitration. The only agent that sets an outcome."],
+    ["4", "Communicator", "Employee message and audit note."],
+  ],
+  [0.08, 0.34, 0.58],
+));
+children.push(spacer());
 children.push(p("A debate or negotiation topology was considered and rejected. Expense adjudication has a deterministic ground truth: a ceiling is either breached or it is not. Agents arguing about it adds latency and variance and destroys reproducibility, and it buys nothing that arbitration against a fixed precedence order does not already give."));
 
 children.push(h2("3.1 The six agents and their authority"));
@@ -295,16 +297,21 @@ children.push(bullet("Leakage: money approved that policy says should have been 
 children.push(bullet("Friction: money stopped that policy says should have been approved"));
 
 children.push(h2("6.2 Results"));
-children.push(...code([
-  "Outcome accuracy                   44/44 = 100.0%",
-  "Exact match (outcome and rupees)   44/44 = 100.0%",
-  "Mean absolute rupee error          INR 0.00",
-  "Leakage (underblocked)             INR 0.00",
-  "Friction (overblocked)             INR 0.00",
-  "Escalations auto paid instead      0",
-  "Payable claims auto rejected       0",
-  "Mean latency per claim             0.1 ms",
-]));
+children.push(table(
+  ["Measure", "Result"],
+  [
+    ["Outcome accuracy", "44 / 44 = 100.0%"],
+    ["Exact match, outcome and rupees", "44 / 44 = 100.0%"],
+    ["Mean absolute rupee error", "INR 0.00"],
+    ["Leakage, money underblocked", "INR 0.00"],
+    ["Friction, money overblocked", "INR 0.00"],
+    ["Escalations auto paid instead", "0"],
+    ["Payable claims auto rejected", "0"],
+    ["Mean latency per claim", "0.1 ms"],
+  ],
+  [0.62, 0.38],
+));
+children.push(spacer());
 children.push(p("Confusion matrix, rows are expected and columns are predicted:", { after: 110 }));
 children.push(table(
   ["", "APPROVE", "PARTIAL", "REJECT", "ESCALATE"],
@@ -379,14 +386,19 @@ children.push(rich([{ t: "Policy versioning. ", b: true }, { t: "Clause level di
 
 // --- 9 -------------------------------------------------------------------
 children.push(h1("9. Running it"));
-children.push(...code([
-  "python run_review.py --claim CLM-4015      # one claim in full detail",
-  "python -m eval.evaluate                    # the benchmark in section 6",
-  "python -m eval.stress_test                 # the invariants in section 6.4",
-  "python tests/test_tools.py                 # 20 unit tests",
-  "streamlit run app/streamlit_app.py         # the reviewer front end",
-  "jupyter notebook notebooks/demo.ipynb      # the walkthrough",
-]));
+children.push(table(
+  ["Command", "What it does"],
+  [
+    ["python run_review.py --claim CLM-4015", "One claim, reviewed in full detail"],
+    ["python -m eval.evaluate", "The benchmark in section 6"],
+    ["python -m eval.stress_test", "The invariants in section 6.4"],
+    ["python tests/test_tools.py", "20 unit tests"],
+    ["streamlit run app/streamlit_app.py", "The reviewer front end"],
+    ["jupyter notebook notebooks/demo.ipynb", "The walkthrough"],
+  ],
+  [0.52, 0.48],
+));
+children.push(spacer());
 children.push(p("Nothing above needs an API key. To run with a model, copy .env.example to .env and set LLM_PROVIDER to ollama, gemini or openai."));
 
 children.push(rule());
@@ -418,7 +430,7 @@ const doc = new Document({
   description: `Agentic AI individual assignment, ${AUTHOR}, Roll No. ${ROLL}`,
   styles: {
     default: {
-      document: { run: { font: "Calibri", size: 21, color: INK } },
+      document: { run: { font: "Times New Roman", size: 23, color: INK } },
     },
   },
   numbering: {

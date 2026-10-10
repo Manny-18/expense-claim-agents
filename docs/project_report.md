@@ -2,7 +2,7 @@
 
 **Individual Assignment, Agentic AI**
 PGDM (BDA) Batch 2025-27, FORE School of Management
-Aman Aggarwal, Roll No. 065064
+Manav Verma
 
 Repository: `expense-claim-agents` | Policy under review: Meridian Consulting India
 Pvt. Ltd. T&E Policy v3.2

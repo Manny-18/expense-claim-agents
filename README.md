@@ -176,4 +176,4 @@ report, where they belong.
 ---
 
 Built for the Agentic AI individual assignment, PGDM (BDA) 2025-27, FORE School of
-Management. Author: Aman Aggarwal, Roll No. 065064.
+Management. Author: Manav Verma.

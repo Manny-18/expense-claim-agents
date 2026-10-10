@@ -9,8 +9,8 @@ const {
   LevelFormat, convertInchesToTwip,
 } = require("docx");
 
-const AUTHOR = process.argv[2] || "Aman Aggarwal";
-const ROLL = process.argv[3] || "065064";
+const AUTHOR = process.argv[2] || "Manav Verma";
+const ROLL = process.argv[3] || "";
 const OUT = process.argv[4] || "project_report.docx";
 const ROOT = path.resolve(__dirname, "..");
 

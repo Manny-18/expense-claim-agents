@@ -5,7 +5,7 @@ Written for a MacBook, works the same on Linux.
 ## 1. Get the code
 
 ```bash
-git clone https://github.com/<your-username>/expense-claim-agents.git
+git clone https://github.com/Manny-18/expense-claim-agents.git
 cd expense-claim-agents
 python3 --version        # needs 3.9 or newer
 ```
@@ -66,7 +66,7 @@ git init
 git add .
 git commit -m "Expense Claim Adjudication Crew: domain expert agents for T&E review"
 git branch -M main
-git remote add origin https://github.com/<your-username>/expense-claim-agents.git
+git remote add origin https://github.com/Manny-18/expense-claim-agents.git
 git push -u origin main
 ```
 

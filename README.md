@@ -29,7 +29,7 @@ stress test is the harder evidence, and it caught a real defect. Both are discus
 No API key, no model, no framework. Python 3.9 or newer.
 
 ```bash
-git clone https://github.com/<your-username>/expense-claim-agents.git
+git clone https://github.com/Manny-18/expense-claim-agents.git
 cd expense-claim-agents
 
 python run_review.py --claim CLM-4015      # one claim, in full detail
